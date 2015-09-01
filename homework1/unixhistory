@@ -1,0 +1,200 @@
+ls
+ls --help
+man man
+(~) 56% ls -F
+ls /
+cd /rsgrps/bhurwitz/hurwitzlab/abe487
+cd
+ls .*
+cd
+cd..
+cd../..
+cd../../..
+cd
+mkdir/work
+mkdir
+mkdir foo
+ls foo
+ls -la
+touch bar
+ls -la bar
+re -r foo
+rm-rf
+w
+w | wc
+wc -l
+ls -l
+ls -lh
+-lh
+wc -l -lh
+ls -l
+ls -lh
+wc -l -lh
+man sort
+man uniq
+date
+date; echo hello; date
+date echo hello date
+man ssh
+ssh-keygen
+cd ~/.ssh
+cd
+w
+w | head -5
+ls
+ls -la
+ls /rsgrps/bhurwits/hurwitzlab/abe487
+id
+ls /tmp/cuffdiff.txt
+cp /tmp/cuffdiff.txt
+fdp.imicrobe.us
+ftp.imicrobe.us
+cd
+pwd
+../
+cd ../
+pwd
+cd ../..
+pwd
+cd home/u22
+ls -aF
+nano
+cd
+nano
+ls -aF
+wc <sequences.fasta 
+head -k1
+man head
+head -n1
+man head
+head -n 1
+head -1
+head n
+head <sequences.fasta -n1
+tail <sequences.fasta -n1
+grep <sequences.fasta 
+man grep
+grep ATGGCGTCTTGGCCTTAAAAGCTC <sequences.fasta 
+grep > <sequences.fasta 
+grep >seq <sequences.fasta 
+grep ATGGCGTCTTGGCCTTAAAAGCTC <sequences.fasta 
+grep ATGGCGTCTTGGCCTTAAAAGCTC <sequences.fasta | wc
+grep ATGGCGTCTTGGCCTTAAAAGCTC <sequences.fasta | wc -l
+mv sequences.fasta -txt singlesequence.txt
+mv sequences.fasta -txt single.fasta
+mv sequences.fasta
+man mv
+mv sequences.fasta -t singlesequence.fasta
+man mv
+mv sequences.fasta -t singlesequence.fasta /home/u22/warnerbailey4
+mv sequences.fasta singlesequence.fasta -t /home/u22/warnerbailey4
+man mv
+mv -T sequences.fasta newsequence.fasta
+cd
+cd ../
+cd
+pwd
+../
+cd
+pwd
+../..
+cd ../
+cd ../..
+cd
+wc -aF
+cd
+cd home/u22
+cd
+ls -aF
+nano
+%ls 
+ls
+echo $PS1
+ls -la
+cd .ssh
+ls
+nano
+nano authorized_keys
+ssh-keygen
+cd .ssh
+ls
+cat id_rsa.pub
+vi config
+cd 
+ls
+git help
+git clone
+git clone git@github.com:warnerbailey4/abe487.git
+ls
+cd abe487/
+ls
+mkdir 
+mkdir homework1
+cd homework1
+ftp ftp.imicrobe.us
+ls
+man head
+
+head -n1 mouse.fa 
+man tail
+tail -n3
+tail -n3 mouse.fa 
+head mouse.fa 
+grep '>' mouse.fa 
+grep '>' mouse.fa | wc
+grep '>' mouse.fa | wc -l
+ls
+head cuffdiff.txt 
+grep Chr4 cuffdiff.txt 
+grep Chr4 cuffdiff.txt >Chr4
+ls
+wc -l Chr4
+cd ..
+ls
+git status
+git add homework1/
+git status
+git commit -m 'initial commit'
+git config --global user.name "Bailey Warner" 
+git config --global user.email warnerbailey4@email.arizona.edu
+git commit -m 'initial commit'
+git push
+nano
+cd sequences.fasta
+wc sequesnces.fasta
+wc sequences.fasta
+wc -l sequesnces.fasta
+wc -l sequences.fasta
+head -n1  sequences.fasta
+tail -n1 sequesnces.fasta
+tail -n1 sequences.fasta
+tail -n3 sequences.fasta
+grep help
+man grep
+grep < sequences.fasta 
+grep --help
+man grep
+grep > sequences.fasta | wc
+nano
+grep > sequences.fasta | wc
+man grep
+cd
+cd -l
+cd -ls
+man mkdir
+sequences.fasta wc
+nano
+mkdir
+man mkdir
+mkdir fasta.
+cd
+pwd
+cd ..
+wc
+cd
+pwd
+cd ..
+ls
+ls -wc
+ls -af
+wc
