@@ -1,0 +1,128 @@
+1..21
+ok 1 - 01-mod.pl
+ok 2 - 01-mod.pl 1 2 3 4 5 6 7
+ok 3 - 01-mod.pl 1 3 5 7
+not ok 4 - 02-mod-sort-sum.pl
+#   Failed test '02-mod-sort-sum.pl'
+#   at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 258.
+#          got: '1'
+#     expected: '0'
+# Different in line: 1: got (Please privide a list of numbers), expect (Please provide a list of numbers.)
+not ok 5 - 02-mod-sort-sum.pl 1 2 3 4 5 6 7
+#   Failed test '02-mod-sort-sum.pl 1 2 3 4 5 6 7'
+#   at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 258.
+#          got: '2'
+#     expected: '0'
+# Different in line: 1: got (sum evens = 12 ), expect (sum evens = 12)
+# 
+# 2: got (sum odds = 16 ), expect (sum odds = 16)
+not ok 6 - 03-sort.pl
+#   Failed test '03-sort.pl'
+#   at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 258.
+#          got: '1'
+#     expected: '0'
+# Different in line: 1: got (Please provide a list of numbers), expect (Please provide a list of numbers.)
+ok 7 - 03-sort.pl 98 2 36 74 27 33
+not ok 8 - 04-array-ops.pl
+#   Failed test '04-array-ops.pl'
+#   at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 258.
+#          got: '3'
+#     expected: '0'
+# Different in line: got nothing, expected: shifted = 101, array = 2, 15, 22, 95, 33, 2, 27, 72, 15
+# got nothing, expected: after push, array = 2, 15, 22, 95, 33, 2, 27, 72, 15, 12
+# got nothing, expected: after unshift, array = 4, 2, 15, 22, 95, 33, 2, 27, 72, 15, 12
+not ok 9 - 05-string-sort.pl
+#   Failed test '05-string-sort.pl'
+#   at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 258.
+#          got: '7'
+#     expected: '0'
+# Different in line: 1: got (String found where operator expected at /gsfs2/home/u22/warnerbailey4/abe487/week5/05-string-sort.pl line 7, near ")"\n""), expect (Please provide a list of sequences.)
+# 
+# 2: got 	(Missing operator before "\n"?)
+# 3: got String found where operator expected at /gsfs2/home/u22/warnerbailey4/abe487/week5/05-string-sort.pl line 8, near ")"\n""
+# 4: got 	(Missing operator before "\n"?)
+# 5: got syntax error at /gsfs2/home/u22/warnerbailey4/abe487/week5/05-string-sort.pl line 7, near ")"\n""
+# 6: got syntax error at /gsfs2/home/u22/warnerbailey4/abe487/week5/05-string-sort.pl line 8, near "})"
+# 7: got Execution of /gsfs2/home/u22/warnerbailey4/abe487/week5/05-string-sort.pl aborted due to compilation errors.
+not ok 10 - 05-string-sort.pl ATGCCCGGCCCGGC GCGTGCTAGCAATACGATAAACCGG ATATATATCGAT ATGGGCCC
+#   Failed test '05-string-sort.pl ATGCCCGGCCCGGC GCGTGCTAGCAATACGATAAACCGG ATATATATCGAT ATGGGCCC'
+#   at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 258.
+#          got: '9'
+#     expected: '0'
+# Different in line: 1: got String found where operator expected at /gsfs2/home/u22/warnerbailey4/abe487/week5/05-string-sort.pl line 7, near ")"\n""
+# 2: got 	(Missing operator before "\n"?)
+# 3: got String found where operator expected at /gsfs2/home/u22/warnerbailey4/abe487/week5/05-string-sort.pl line 8, near ")"\n""
+# 4: got 	(Missing operator before "\n"?)
+# 5: got syntax error at /gsfs2/home/u22/warnerbailey4/abe487/week5/05-string-sort.pl line 7, near ")"\n""
+# 6: got syntax error at /gsfs2/home/u22/warnerbailey4/abe487/week5/05-string-sort.pl line 8, near "})"
+# 7: got Execution of /gsfs2/home/u22/warnerbailey4/abe487/week5/05-string-sort.pl aborted due to compilation errors.
+# got nothing, expected: sorted = ATATATATCGAT, ATGCCCGGCCCGGC, ATGGGCCC, GCGTGCTAGCAATACGATAAACCGG
+# got nothing, expected: reverse = GCGTGCTAGCAATACGATAAACCGG, ATGGGCCC, ATGCCCGGCCCGGC, ATATATATCGAT
+couldn't find the script 06-string-sort-len.pl at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 203, <$fh> line 17.
+ok 11 - 06-string-sort-len.pl
+couldn't find the script 06-string-sort-len.pl at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 203, <$fh> line 17.
+not ok 12 - 06-string-sort-len.pl AACT TACCTAG TTACAG
+#   Failed test '06-string-sort-len.pl AACT TACCTAG TTACAG'
+#   at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 258.
+#          got: '2'
+#     expected: '0'
+# Different in line: got nothing, expected: sorted = AACT, TTACAG, TACCTAG
+# got nothing, expected: reverse = TACCTAG, TTACAG, AACT
+couldn't find the script 07-gc.pl at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 203, <$fh> line 17.
+ok 13 - 07-gc.pl
+couldn't find the script 07-gc.pl at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 203, <$fh> line 17.
+not ok 14 - 07-gc.pl ATGGGCCC atgcccggcccggc
+#   Failed test '07-gc.pl ATGGGCCC atgcccggcccggc'
+#   at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 258.
+#          got: '10'
+#     expected: '0'
+# Different in line: got nothing, expected: -------
+# got nothing, expected: Seq   : ATGGGCCC
+# got nothing, expected: Length: 8
+# got nothing, expected: #GC   : 6
+# got nothing, expected: %GC   : 75
+# got nothing, expected: -------
+# got nothing, expected: Seq   : atgcccggcccggc
+# got nothing, expected: Length: 14
+# got nothing, expected: #GC   : 12
+# got nothing, expected: %GC   : 85.7142857142857
+couldn't find the script 08-snps.pl at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 203, <$fh> line 17.
+ok 15 - 08-snps.pl
+couldn't find the script 08-snps.pl at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 203, <$fh> line 17.
+ok 16 - 08-snps.pl AACT ATCGA
+couldn't find the script 08-snps.pl at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 203, <$fh> line 17.
+not ok 17 - 08-snps.pl AACT AACT
+#   Failed test '08-snps.pl AACT AACT'
+#   at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 258.
+#          got: '1'
+#     expected: '0'
+# Different in line: got nothing, expected: Found 0 SNPs.
+couldn't find the script 08-snps.pl at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 203, <$fh> line 17.
+not ok 18 - 08-snps.pl AACT AACG
+#   Failed test '08-snps.pl AACT AACG'
+#   at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 258.
+#          got: '2'
+#     expected: '0'
+# Different in line: got nothing, expected: Pos 4: T => G
+# got nothing, expected: Found 1 SNP.
+couldn't find the script 08-snps.pl at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 203, <$fh> line 17.
+not ok 19 - 08-snps.pl AACT AATC
+#   Failed test '08-snps.pl AACT AATC'
+#   at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 258.
+#          got: '3'
+#     expected: '0'
+# Different in line: got nothing, expected: Pos 3: C => T
+# got nothing, expected: Pos 4: T => C
+# got nothing, expected: Found 2 SNPs.
+couldn't find the script 09-extra-credit.pl at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 203, <$fh> line 17.
+ok 20 - 09-extra-credit.pl
+couldn't find the script 09-extra-credit.pl at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 203, <$fh> line 17.
+not ok 21 - 09-extra-credit.pl AACT AATC
+#   Failed test '09-extra-credit.pl AACT AATC'
+#   at /rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5/Test/Script/Run.pm line 258.
+#          got: '3'
+#     expected: '0'
+# Different in line: got nothing, expected: A A C T
+# got nothing, expected: | | * *
+# got nothing, expected: A A T C
+# Looks like you failed 12 tests of 21.
