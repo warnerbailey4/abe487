@@ -7,8 +7,8 @@ use feature "say";
 if (!@ARGV) {
     die "Please provide a list of sequences.\n"
 }
-say "sorted = ", join(', ', sort (@ARGV)), "\n";
+say "sorted = ", join ', ', sort @ARGV;
 
-say "reverse = ", join(', ', sort {$b cmp $a} (@ARGV)), "\n";
+say "reverse = ", join ', ', sort {$b cmp $a} @ARGV;
 
 

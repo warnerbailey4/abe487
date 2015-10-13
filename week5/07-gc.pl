@@ -21,7 +21,7 @@ for my $sequence (@ucase) {
         $total_length++
     }
 
-    say "------";
+    say "-------";
     say "Seq :", @ARGV;
     say "Length: ", $total_length;
     say "#GC :", $GC_count;   
