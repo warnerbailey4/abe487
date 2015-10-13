@@ -14,7 +14,8 @@ for my $num (@ARGV){
     #print "Number: $num\n";
     #print $num%2, "\n";
     if ($num%2 == 0) {
-         $esum = $esum + $num;
+         #$esum = $esum + $num;
+         $esum += $num;
     } 
     else {
          $osum = $osum + $num;
