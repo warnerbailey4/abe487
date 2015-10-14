@@ -17,9 +17,6 @@ my $id = '';
 
 while (my $line = <$fh>) {
     chomp $line;
-    #my ($key, $value) = split /\t/, $line;
-    #$hash{$key} = $value;
-    #say "line ($line)";
     if (substr($line, 0, 1) eq '>') {
         $id = substr($line,1);
         $seq{$id} = 0;

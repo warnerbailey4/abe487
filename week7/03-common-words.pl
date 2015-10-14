@@ -2,16 +2,50 @@
 
 use strict;
 use warnings;
+use autodie; 
+use feature 'say';
+use Data::Dumper;
+
+unless (@ARGV == 2) {
+    die "Please provide two input files to read.\n";
+} 
 
 my ($f1, $f2) = @ARGV;
 
 open my $f1_fh, "<", $f1; 
-or die "Please provide a valid file";
+open my $f2_fh, "<", $f2;
 
-open my $f2_fh, "<" $f2;
-or die "Please provide two valid input files";
+my %file1;
+while (my $line = <$f1_fh>) {
+    chomp $line;
+    my @words = split /\s+/, $line;
+    for my $word (@words) {
+        say "before ($word)";
+        $word =~ s/[^A-Za-z0-9]//g;
+        say "after ($word)";
+        $file1{uc($word)} = 1;
+    }
+}
+say Dumper (\%file1);       
 
-while (my $words = <$f1_fh>) {
-    chomp $words;
-#$word =~ s/[^A-Za-z0-9]//g;
+my %file2;
+while (my $line = <$f2_fh>) {
+    chomp $line;
+    my @words = split /\s+/, $line;
+    for my $word (@words) {
+        say "before ($word)";
+        $word =~ s/[^A-Za-z0-9]//g;
+        say "after ($word)";
+        $file2{uc($word)} = 1;
+    }
+}
+say Dumper (\%file2);
 
+#while ($file1 eq $file2) {
+ #   say "$file1\n";
+#}     
+#while (exists $file1{$file2}) {
+#    say "$file1\n";
+#}   
+
+ 
