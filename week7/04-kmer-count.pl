@@ -49,7 +49,7 @@ if ($single < $count) {
         my $count = $unique{$kmer};
         if ($count >1) {
             $i++;
-            last if $i >= 10;
+            last if $i > 10;
             say $kmer, ": ", $count;
         }
     }
