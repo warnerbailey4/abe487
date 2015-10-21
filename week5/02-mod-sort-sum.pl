@@ -21,5 +21,5 @@ for my $num (@ARGV){
          $osum = $osum + $num;
     }
 }
-print "sum evens = $esum \n";
-print "sum odds = $osum \n";
+print "sum evens = $esum\n";
+print "sum odds = $osum\n";

@@ -4,6 +4,7 @@ use strict;
 use warnings;
 use feature 'say';
 
-my $names = "bailey^kyle^moregan^graham^kenzie";
-my @array =split(^, $names);
-print @array;
+chomp(my $names = join '', <>);
+my @array =split(/\^/, $names);
+
+say join("\n", sort { length($a) <=> length($b) } @array), "\n";

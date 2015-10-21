@@ -21,7 +21,7 @@ for (my $i=0; $i<length($seq1); $i++){
     my $s2 = substr $seq2, $i, 1;   
     if ($s1 ne $s2) {   
         $num_snps++;
-        say "Pos:", $i + 1," ", $s1, "=>", $s2;
+        say "Pos ", $i + 1,": ", $s1, " => ", $s2;
     }
 }   
  
