@@ -3,24 +3,45 @@
 use strict;
 use warnings;
 use autodie;
+use Bio::Seq;
+use Bio::SeqIO;
 use feature 'say';
 use Getopt::Long;
 use Pod::Usage;
 
 main();
-
+    
 # --------------------------------------------------
 sub main {
-    my %args = get_args();
 
-    if ($args{'help'} || $args{'man_page'}) {
-        pod2usage({
-            -exitval => 0,
-            -verbose => $args{'man_page'} ? 2 : 1
-        });
-    }; 
+my %opts = get_opts();
+my @args = @ARGV;
 
-    say "OK";
+if ($opts{'help'} || $opts{'man'}) {
+    pod2usage({
+        -exitval => 0,
+        -verbose => $opts{'man'} ? 2 : 1
+    });
+}
+
+for my $file (@ARGV) {
+    my $in = Bio::SeqIO->new(-file   => $file,
+                             -format => 'Genbank');
+
+my $count = 0;
+    while (my $seq = $in->next_seq){
+        my @cds = grep { $_->primary_tag eq 'CDS' } $seq->top_SeqFeatures;
+        $count++;
+    my $seq_id = $seq->id;
+        my $ncds   = scalar @cds;
+        say "$seq_id has $ncds CDS";
+        my $i;
+        for my $cds (@cds) {
+            say ++$i, ": ", $cds->get_tag_values('translation');
+        }
+    }
+say "OK";
+}
 }
 
 # --------------------------------------------------
@@ -29,7 +50,7 @@ sub get_args {
     GetOptions(
         \%args,
         'help',
-        'man',
+        'man_page',
     ) or pod2usage(2);
 
     return %args;
