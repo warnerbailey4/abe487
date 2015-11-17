@@ -31,7 +31,9 @@ sub main {
     unless (-d $out_dir) {
         make_path($out_dir);
     }
-
+    if (@ARGV == 0) {
+         pod2usage;
+    }
     for my $file (@ARGV) {
         say $file;
         my $in  = Bio::SeqIO->new(-file => $file ,
